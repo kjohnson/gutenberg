@@ -57,7 +57,7 @@ const setupInitHooks = () => {
 		'core/react-native-editor',
 		( props ) => {
 			const { capabilities = {} } = props;
-			let { initialData, initialTitle, postType } = props;
+			let { initialData, initialTitle, postType, uiStrings } = props;
 
 			if ( initialData === undefined && __DEV__ ) {
 				initialData = initialHtml;
@@ -75,6 +75,7 @@ const setupInitHooks = () => {
 				initialTitle,
 				postType,
 				capabilities,
+				uiStrings,
 				colors: props.colors,
 				gradients: props.gradients,
 			};
